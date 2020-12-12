@@ -298,14 +298,9 @@ class SampleHuman:
         else:
             return None
 
-class CompetitorExamplePlayer:
-    """
-    Example player class template. This is not a functional class.
-    """
+class Abot:
     def __init__(self, side, board, max_time_per_move, time_control):
         """
-        Initialize player class to implement an idiot bot which plays random moves.
-
         side: str
           Either 'white' or 'black' for the side that the player is expected to play
 
@@ -319,7 +314,7 @@ class CompetitorExamplePlayer:
           The time control, formatted as (x, y) where the time control is x minutes
           with a y second increment. This argument is distinct from max_time_per_move.
         """
-        self.name = 'Name'
+        self.name = 'Placeholder'
         
         self.side = side
         self.board = board
@@ -330,9 +325,12 @@ class CompetitorExamplePlayer:
         """
         Method to make a move. Returns the move in UCI.
         """
+        import Abot
         
-        return move
-    
+
+        #return move
+        return None
+
     def receive_move(self, move, time_left=None):
         """
         Method to update board with move from the other side.
@@ -363,11 +361,12 @@ class CompetitorExamplePlayer:
         """
         Method to receive trash talk.
         """
-        return
+        return False
 
     def solicit_trash_talk(self):
         """
         Method to solicit trash talk. Return a string to solicit trash talk. If no trash
         talk, return none.
         """
+
         return None
